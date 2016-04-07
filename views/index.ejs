@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>口袋怪獸-皮可丘</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico"/>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">口袋怪獸-皮可丘</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">口袋</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">皮可丘picture</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="assets/img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">皮可皮可！Picture ~~~~~~</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="margin-bottom:50px">口袋</h2>
+                </div>
+            </div>
+      <!--      <div>
+                <ul id="filters" class="clearfix">
+                  	<li><span class="filter active" data-filter="to-do-list daily-record">All</span></li>
+                  	<li><span class="filter" data-filter="to-do-list">To-Do List</span></li>
+                  	<li><span class="filter" data-filter="daily-record">Daily Record</span></li>
+                    <li><span class="filter" data-filter="others">Others</span></li>
+                </ul>
+            </div>
+      -->
+            <div class="row">
+              <div id="sortable">
+                  <% if (noteinfos.length) { %>
+                    <% noteinfos.forEach(function(noteinfos){ %>
+                          <div class="col-sm-4 portfolio-item overflow-height ui-state-default" data-cat="<%= noteinfos['type'] %>">
+                              <a  class="portfolio-link overflow-height" data-toggle="modal">
+                                  <div class="caption" >
+                                  </div>
+
+                                  <img src="assets/img/ball/<%= noteinfos['ball'] %>.png" class="magic_ball img-responsive img-margin-left-margin-top" >
+                                  <img src="data:image/png;base64,<%=noteinfos['imgContentData'] %>" class="user_monster img-responsive" alt="">
+                                  <div class="caption-content ">
+                                      <p ><%= noteinfos['note'] %></p>
+                                      <hr class="note_hr">
+                                      <p class="note_p"><%= noteinfos['date'] %></p>
+                                  </div>
+                              </a>
+                          </div>
+                    <% }) %>
+                  <% } %>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="margin-bottom: 10px;">皮可丘Picture</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form method="POST" enctype="multipart/form-data" action="/note" name="sentMessage">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Note</label>
+                                <input id="note_input" type="text" class="form-control" placeholder="Note" name="note"  required data-validation-required-message="Please enter your note.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Date</label>
+                                <input type="date" class="form-control" placeholder="Date" name="date"  required data-validation-required-message="Please enter date.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                <!--
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <h4>選擇皮可丘類型</h4>
+                                    <input type="radio" name="n_type" value="to-do-list"> To-Do List&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="n_type" value="daily-record"> Daily Record&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="n_type" value="others"> Others
+
+                            </div>
+                        </div>
+                -->
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <h4>選擇一顆皮可丘球</h4>
+                                    <input type="radio" name="ball" value="1"> &nbsp;&nbsp; <img class="btn-ball" src="assets/img/ball/1.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="ball" value="2"> &nbsp;&nbsp; <img class="btn-ball" src="assets/img/ball/2.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="ball" value="3"> &nbsp;&nbsp; <img class="btn-ball" src="assets/img/ball/3.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="ball" value="4"> &nbsp;&nbsp; <img class="btn-ball" src="assets/img/ball/4.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="ball" value="5"> &nbsp;&nbsp; <img class="btn-ball" src="assets/img/ball/5.png" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="ball" value="6"> &nbsp;&nbsp; <img class="btn-ball" src="assets/img/ball/6.png" >
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <h4>選擇一隻皮可丘 <span style="font-size:12px">(JPEM/PNG)</span></h4>
+
+                                <input style="padding-top:7px; font-size: 16px;" type="file" name="userPhoto" />
+                                <span id = "status"></span>
+                                  <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" value="Upload Image" class="btn btn-success btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Irene
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="assets/js/jqBootstrapValidation.js"></script>
+    <script src="assets/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/freelancer.js"></script>
+    <script src="assets/js/filter.js"></script>
+</body>
+
+</html>
