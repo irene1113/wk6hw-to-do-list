@@ -16,7 +16,8 @@
  div#sortable>div.active{
    display: block;
  }
- /*#filters {
+ /*
+ #filters {
 	margin:1%;
 	padding:0;
 	list-style:none;

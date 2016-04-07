@@ -1,4 +1,4 @@
-/*var filter_btm_active = function() {
+var filter_btm_active = function() {
   $(current_li.children).removeClass("active");
   $(this.children).addClass("active");
   current_li = this;
@@ -33,4 +33,3 @@ var filters_info = document.getElementById("sortable");
 for (var index =0; index <filters_info.children.length; index ++){
   $(filters_info.children[index]).addClass("active");
 }
-*/
